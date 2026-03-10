@@ -67,7 +67,8 @@ server.port=8080
 
 ## Swagger
 ```bash
-После запуска документация доступна по адресу:http://localhost:8080/swagger-ui.html
+После запуска документация доступна по адресу:
+http://localhost:8080/swagger-ui.html
 ```
 
 ## Основные endpoints
