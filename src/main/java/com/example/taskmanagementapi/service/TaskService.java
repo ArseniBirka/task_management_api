@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -62,5 +63,8 @@ public class TaskService {
 
     public Page<Task> getTasksByPriority(Priority priority, Pageable pageable) {
         return taskRepository.findByPriority(priority, pageable);
+    }
+    public List<Task> searchTasks(String title) {
+        return taskRepository.findByTitleContainingIgnoreCase(title);
     }
 }
